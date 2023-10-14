@@ -1,8 +1,11 @@
 body {
     font-family: 'Istok Web', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 section {
     padding: 2%;
+    max-width: 100%;
 }
 .empresa {
     background-color: #89CFF0;
