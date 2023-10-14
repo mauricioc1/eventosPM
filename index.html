@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="font/IstokWeb-Regular.ttf">
+    <title>Cotizar Evento</title>
+</head>
+<body>
+    <section class="empresa">
+
+        <img src="imgs/logo.png">
+        <h2>Tu evento personalizado con Evento PM</h2>
+        <img>
+    </section>
+
+    <section class="mision">
+        <h3>Mision</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima minus omnis esse voluptatibus sapiente accusantium amet iste labore sequi numquam, excepturi delectus beatae voluptate ducimus nemo, atque, consequuntur sunt.</p>
+    </section>
+
+    <section class="formulario">
+        <h3>Formulario De Cotizacion</h3>
+
+
+        <label for="eventos">Tipo de Evento</label>
+        <select name="eventos" id="eventos">
+            <option value="nulo">Seleccionar Evento</option>
+            <option value="opcion1">opcion1</option>
+            <option value="opcion2">opcion2</option>
+            <option value="opcion3">opcion3</option>
+            <option value="opcion4">opcion4</option>
+        </select>
+
+        <p>ubicacion</p>
+        <label for="provincia">Provincia</label>
+        <select name="provincia" id="provincia">
+            <option value="nulo">Seleccionar Provincia</option>
+            <option value="opcion1">opcion1</option>
+            <option value="opcion2">opcion2</option>
+            <option value="opcion3">opcion3</option>
+            <option value="opcion4">opcion4</option>
+        </select>
+        <label for="canton">Cantón</label>
+        <select name="canton" id="canton">
+            <option value="nulo">Seleccionar Cantón</option>
+            <option value="opcion1">opcion1</option>
+            <option value="opcion2">opcion2</option>
+            <option value="opcion3">opcion3</option>
+            <option value="opcion4">opcion4</option>
+        </select>
+
+        <label for="invitados">Asistentes al evento</label>
+        <input type="text" id="invitados" name="invitados">
+        
+        <div class="slidecontainer">
+            <input type="range" min="4" max="12" value="4" class="slider" id="myRange">
+            <p id="valorHoras"></p>
+        </div>
+
+        <label for="menu">Menú</label>
+        <select name="menu" id="menu">
+            <option value="nulo">Seleccionar Menú</option>
+            <option value="opcion1">opcion1</option>
+            <option value="opcion2">opcion2</option>
+            <option value="opcion3">opcion3</option>
+            <option value="opcion4">opcion4</option>
+        </select>
+        
+        <label for="pirotecnia">Pirotecnia Fría</label>
+        <input type="checkbox" id="pirotecnia" name="pirotecnia" />
+    </section>
+
+
+    
+    <footer>
+        <img src="imgs/logo.png">
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
