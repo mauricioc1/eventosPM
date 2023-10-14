@@ -11,10 +11,11 @@ section {
 .formulario {
     background-color: #012FFF;
     color: #fff;
+    text-align: center;
 }
 
 label {
-    display: flex;
+    display: block;
     padding-top: 1%;
 }
 
@@ -33,6 +34,14 @@ label {
     cursor: pointer;
 }
 
+#factura {
+    display: inline;
+    margin: auto;
+}
+
+#pirotecnia {
+    display: flow;
+}
 
 footer{
     color: #fff;
