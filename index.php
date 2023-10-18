@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="font/IstokWeb-Regular.ttf">
-    <title>Cotizar Evento</title>
-</head>
-<body>
+
+    <?php require 'inc/header.php'; ?>
+
     <div class="empresa">
 
         <img src="imgs/logo.png">
@@ -75,11 +68,4 @@
         <button type="button" id="factura">Generar Factura</button>
     </div>
 
-
-    
-    <footer>
-        <img src="imgs/logo.png">
-    </footer>
-    <script src="main.js"></script>
-</body>
-</html>
+    <?php require 'inc/footer.php'; ?>
