@@ -1,4 +1,4 @@
-    <footer>
+    <footer id="footer">
         <img src="imgs/logo.png">
     </footer>
 

@@ -1,19 +1,12 @@
 
     <?php require 'inc/header.php'; ?>
 
-    <div class="empresa">
-
-        <img src="imgs/logo.png">
-        <h2>Tu evento personalizado con Evento PM</h2>
-        <img>
-    </div>
-
     <div class="mision">
         <h3>Mision</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima minus omnis esse voluptatibus sapiente accusantium amet iste labore sequi numquam, excepturi delectus beatae voluptate ducimus nemo, atque, consequuntur sunt.</p>
     </div>
 
-    <div class="formulario">
+    <div class="formulario" id="cotizar">
         <h3>Formulario De Cotizacion</h3>
         <h1 id="precioTotal">$0</h1>
 
