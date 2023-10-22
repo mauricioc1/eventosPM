@@ -18,13 +18,37 @@
     });
 
 
+    // ------------------------------------ INDEX -------------------------------------------
+    $("body").on("click", "#navigation li", navigation);
+
+
   }); // end DOMContentLoaded
 
 
 })();
 
 // ///////////////// *******************************  FUNCIONES  ****************************** /////////////////////
+function navigation(e){
+  // e.target.preventDefult();
 
+  console.log(e.target);
+  if($(e.target).hasClass("inicio")){
+    location.reload();
+  }
+
+  if($(e.target).hasClass("cotizar")){
+      $('html, body').animate({
+          scrollTop: $("#cotizar").offset().top
+      }, 1000);
+  }
+  
+  if($(e.target).hasClass("contacto")){
+    $('html, body').animate({
+      scrollTop: $("#footer").offset().top
+  }, 1000);
+  }
+
+}
 
 
 
