@@ -90,7 +90,7 @@ textarea {
   --blue: #012FFF;
   --white: #FFFFFF;
   --lightBlue: #89CFF0;
-  --black: 141414;
+  --black: #141414;
     /* redondeado */
   --radius: 2rem; 
 }
@@ -197,10 +197,20 @@ a{
     width: 100rem;
 }
 
-
-
-
 /* ////////////////////////// -----------------------------MISSION SECTION ---------------------- //////////////////////////////*/
+
+
+.mision{
+    padding: 5rem 0;
+}
+
+
+.mision p{
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+/* ////////////////////////// ----------------------------- FORMULARIO ---------------------- //////////////////////////////*/
 
 .empresa {
     background-color: #89CFF0;
@@ -237,13 +247,30 @@ a{
     display: flow;
 }
 
+/* ////////////////////////// ----------------------------- FOOTER ---------------------- //////////////////////////////*/
+
 footer{
     color: #fff;
-    background-color: #141414;
+    background-color: var(--black);
+    padding: 7rem 0;
 }
 
-footer img {
-    width: 30%;
-    height: auto;
-    padding: 5%;
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer_image {
+    width: 25rem;
+    display: flex;
+    align-items: center;
+}
+footer .social_media div{
+    display: flex;
+    justify-content: end;
+}
+footer .social_media a{
+    font-size: 3rem;
+    margin: 0 1rem;
+    
 }
