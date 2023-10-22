@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="css/fontawesome-free-6.2.1-web/css/all.min.css">
+
     <!-- Font -->
     <link rel="stylesheet" type="text/css" href="font/IstokWeb-Regular.ttf">
     

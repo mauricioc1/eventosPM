@@ -1,8 +1,8 @@
 
     <?php require 'inc/header.php'; ?>
 
-    <div class="mision">
-        <h3>Mision</h3>
+    <div class="mision container">
+        <h2>Mision</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima minus omnis esse voluptatibus sapiente accusantium amet iste labore sequi numquam, excepturi delectus beatae voluptate ducimus nemo, atque, consequuntur sunt.</p>
     </div>
 
