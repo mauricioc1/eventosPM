@@ -6,6 +6,7 @@
 
     <!-- NORMALIZE -->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- FONT AWESOME -->
