@@ -21,6 +21,7 @@
     // ------------------------------------ INDEX -------------------------------------------
     $("body").on("click", "#navigation li", navigation);
 
+    // showNotification("Factura generada", true);
 
   }); // end DOMContentLoaded
 
@@ -58,10 +59,10 @@ function showNotification(message, success, timer = true){
   notification.addClass((success) ? 'n_success' : 'n_error');
 
   const text = $("<p></p>").text(message);
-  var close = $("<a></a>").html('<i class="fas fa-times noevents"></i>');
-  close.attr('id', 'remove_notification');
+  // var close = $("<a></a>").html('<i class="fas fa-times noevents"></i>');
+  // close.attr('id', 'remove_notification');
 
-  notification.append(text, close);
+  notification.append(text);
   // insert before toma de paramatros (que insertar, antes de que se insetar)
   $("#notification_container").html("");
   $("#notification_container").html(notification);
