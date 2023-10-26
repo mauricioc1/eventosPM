@@ -187,18 +187,14 @@ a{
   .visible{
     opacity: 1;
   }
-  .notification a{
-    padding-left: 1rem;
-    cursor: pointer;
-  }
   /* colores de la notificaciones */
   .n_error,
-  .n_error a{
+  .n_error p{
     background-color: #fd5949;
     color: #fff;
   }
   .n_success,
-  .n_success a{
+  .n_success p{
     background-color: var(--blue);
     color: #fff;
   }

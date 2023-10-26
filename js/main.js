@@ -21,7 +21,7 @@
     // ------------------------------------ INDEX -------------------------------------------
     $("body").on("click", "#navigation li", navigation);
 
-    // showNotification("Factura generada", true);
+    showNotification("Factura generada", true);
 
     // prueba para el conexion con el backend
     // (async function(){
@@ -72,7 +72,7 @@ function showNotification(message, success, timer = true){
   // var close = $("<a></a>").html('<i class="fas fa-times noevents"></i>');
   // close.attr('id', 'remove_notification');
 
-  notification.append(text);
+  notification.html(text);
   // insert before toma de paramatros (que insertar, antes de que se insetar)
   $("#notification_container").html("");
   $("#notification_container").html(notification);
