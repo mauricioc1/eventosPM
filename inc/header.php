@@ -45,3 +45,10 @@
             </div>
         </div>
     </div>
+
+    <div id="notification_container">
+        <!-- <div class="notification n_sucess visible">
+            <p>Mensaje de la notificacion FRONTEND</p>
+        </div> -->
+    
+    </div>
