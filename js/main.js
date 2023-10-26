@@ -23,6 +23,16 @@
 
     // showNotification("Factura generada", true);
 
+    // prueba para el conexion con el backend
+    // (async function(){
+    //   const myData = new FormData();
+    //   myData.append('message', 'mensaje del frontEnd');
+    //   myData.append('ajaxMethod', 'foo');
+    //   var result = await ajaxRequest(myData);
+    //   showNotification(result.Message, result.Success);
+    // })();
+
+
   }); // end DOMContentLoaded
 
 
@@ -81,4 +91,21 @@ function showNotification(message, success, timer = true){
 }
 
 
+///////////// ************************ AJAX BACKEND CONN ************************ ///////////////
+// FUNCION QUE REALIZA LA CONECCION CON EL BACKEND
+// Debe haber un campo en el form data indicando el metodo a utilizar en el ajax controller llamado 'ajaxMethod'
+async function ajaxRequest(formData){
+  return new Promise(resolve => {
+    $.ajax({
+      url:'app/Ajax.php',
+      type:'POST',
+      processData: false,
+      contentType: false,
+      data: formData
+    }).done(function(data){
+      console.log(data);
+      resolve(JSON.parse(data));
+    });
+  });
+}
 
