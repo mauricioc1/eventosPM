@@ -21,7 +21,7 @@
     // ------------------------------------ INDEX -------------------------------------------
     $("body").on("click", "#navigation li", navigation);
 
-    showNotification("Factura generada", true);
+    // showNotification("Factura generada", true);
 
     // prueba para el conexion con el backend
     // (async function(){
