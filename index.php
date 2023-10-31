@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="font/IstokWeb-Regular.ttf">
-    <title>Cotizar Evento</title>
-</head>
-<body>
-    <div class="empresa">
 
-        <img src="imgs/logo.png">
-        <h2>Tu evento personalizado con Evento PM</h2>
-        <img>
-    </div>
+    <?php require 'inc/header.php'; ?>
 
-    <div class="mision">
-        <h3>Mision</h3>
+    <div class="mision container">
+        <h2>Mision</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima minus omnis esse voluptatibus sapiente accusantium amet iste labore sequi numquam, excepturi delectus beatae voluptate ducimus nemo, atque, consequuntur sunt.</p>
     </div>
 
-    <div class="formulario">
+    <div class="formulario" id="cotizar">
         <h3>Formulario De Cotizacion</h3>
         <h1 id="precioTotal">$0</h1>
 
@@ -75,11 +61,4 @@
         <button type="button" id="factura">Generar Factura</button>
     </div>
 
-
-    
-    <footer>
-        <img src="imgs/logo.png">
-    </footer>
-    <script src="main.js"></script>
-</body>
-</html>
+    <?php require 'inc/footer.php'; ?>
