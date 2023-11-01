@@ -13,8 +13,8 @@
     
 
     // Update the current slider value (each time you drag the slider handle)
-    $("body").on("input", slider, function(e){
-      $(output).text($(e.target).val());
+    $("body").on("input", slider, function(){
+      $(output).text($(slider).val());
     });
 
 

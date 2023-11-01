@@ -11,6 +11,7 @@
     <div class="login-container">
         <h2>Eventos PM</h2>
         <form>
+            <img src="../imgs/logo.png">
             <input type="text" name="username" placeholder="Username">
             <input type="password" name="password" placeholder="Password">
             <button type="submit">Iniciar sesión</button>

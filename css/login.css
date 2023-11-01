@@ -12,6 +12,7 @@ body {
 .login-container {
     background-color: white;
     padding: 2rem;
+    width: 50%;
     border-radius: 10px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -23,7 +24,7 @@ h2 {
 
 input {
     display: block;
-    width: 100%;
+    width: 80%;
     margin-bottom: 1rem;
     padding: 0.5rem;
     background-color: #CFE5FF;
@@ -42,4 +43,8 @@ button {
 
 button:hover {
     background-color: #1f48ff;
+}
+
+img {
+    max-width: 60%;
 }
