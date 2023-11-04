@@ -116,32 +116,44 @@ div.panel-navigation-container{
     flex-grow: 1;
 }
 
-.btn-user-background {
-    background-image: url('../imgs/user.png');
-    background-size: contain; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
+div.panel-navigation-container a.navigation-option{
+    padding: 1rem;
+    width: calc(50% - 3rem);
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    /* sombre */
+    box-shadow: 3px 4px 5px 3px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 3px 4px 5px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 3px 4px 5px 3px rgba(0,0,0,0.25);
 }
 
-.btn-event-background {
-    background-image: url('../imgs/event.png');
-    background-size: contain; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
+@media only screen and (max-width: 1140px) {
+    div.panel-navigation-container{
+        justify-content: center;
+    }
+    div.panel-navigation-container a.navigation-option{
+        width: calc(80% - 3rem);
+        margin-top: 3rem;
+    }
+  }
+
+div.panel-navigation-container a.option-below{
+    margin-top: 3rem;
 }
-  
-.btn-bill-background {
-    background-image: url('../imgs/bill.png');
-    background-size: contain; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
+
+div.panel-navigation-container a.navigation-option > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
-  
-.btn-menu-background {
-    background-image: url('../imgs/menu.png');
-    background-size: contain; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
+
+div.panel-navigation-container a.navigation-option p{
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 div.panel-navigation-container a.navigation-option i{
