@@ -78,3 +78,61 @@ div.login_container form .submit_btn input{
 /* ////////////////////////////////////// PANEL DE ADMINSITRACION ///////////////////////////////////////////////////////*/
 
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(16,40,255) !important;
+}
+
+.admin-panel {
+    width: 80%;
+    height: 80%;
+    background-color: #000;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(10%, 10%);
+    position: absolute;
+}
+
+h1, h6 {
+    font-size:medium;
+    align-self: baseline !important; 
+    margin-left: 10%;
+}
+
+
+.col-sm-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.btn-user-background {
+    background-image: url('../imgs/user.png');
+    background-size: contain; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+
+.btn-event-background {
+    background-image: url('../imgs/event.png');
+    background-size: contain; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+  
+.btn-bill-background {
+    background-image: url('../imgs/bill.png');
+    background-size: contain; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+  
+.btn-menu-background {
+    background-image: url('../imgs/menu.png');
+    background-size: contain; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+  
