@@ -129,7 +129,6 @@ async function loadCantons(){
 
   data.append('ajaxMethod', 'loadFormSelectCantons');
   data.append('idProvince', $(this).val());
-  console.log(data);
   await ajaxHTMLRequest(data, 'select#cantons');
 }
 

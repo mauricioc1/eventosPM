@@ -15,6 +15,9 @@
 
         public function __construct(){
             $this->db = new Db;
+            // inicializacion de la sesion
+            session_start();
+            
             $this->ajaxMethod = isset($_POST['ajaxMethod']) ? $_POST['ajaxMethod'] : NULL ;
             unset($_POST['ajaxMethod']);
 
@@ -92,6 +95,25 @@
             foreach($menu  as $food){ ?>
                 <option value="<?php echo $food->idComida ?>" data-price="<?php echo $food->precioComida; ?>"> <?php echo $food->nombreComida; ?> </option>
             <?php }
+        }
+
+
+        // METODO PARA EL INICIO DEL ADMINISTRADOR
+        private function adminLogin($data){
+            $sql = "SELECT correo FROM usuarios WHERE correo = :correo AND contrasena = :pass;";
+            $this->db->query($sql);
+            $this->db->bind(":correo", $data['email']);
+            $this->db->bind(":pass", $data['pass']);
+
+            
+            if($this->db->countRows() !== 1){
+                return $this->ajaxRequestResult(false, "Datos incorrectos");
+            }else{
+                $_SESSION['ADMIN'] = true;
+
+                return isset($_SESSION['ADMIN']) ? $this->ajaxRequestResult(true, "Se ha iniciado sesion") : $this->ajaxRequestResult(false, "Error al iniciar sesion") ;
+            }
+            
         }
         
 
