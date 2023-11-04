@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col text-center">
                 <h3 style="margin-bottom: 2%; margin-top: 2%;">Formulario De Cotización</h3>
-                <h1 id="precioTotal" style="margin-bottom: 2%;">₡0.00</h1>
+                <h1 id="precioTotal" style="margin-bottom: 2%;">₡ <span>0</span> </h1>
             </div>
         </div>
 
@@ -21,11 +21,7 @@
                 <div class="col-md">
                     <label for="events">Tipo de Evento</label>
                     <select class="form-control" id="events">
-                        <option value="nulo">Seleccionar Evento</option>
-                        <option value="opcion1">opcion1</option>
-                        <option value="opcion2">opcion2</option>
-                        <option value="opcion3">opcion3</option>
-                        <option value="opcion4">opcion4</option>
+                        <!-- Se cargan del backend -->
                     </select>
                 </div>
             <div class="col-md"></div>
@@ -37,12 +33,8 @@
             <div class="col-md"></div>
                 <div class="col-md">
                     <label for="pr">Provincia</label>
-                    <select class="form-control" id="pr">
-                        <option value="nulo">Seleccionar Provincia</option>
-                        <option value="opcion1">opcion1</option>
-                        <option value="opcion2">opcion2</option>
-                        <option value="opcion3">opcion3</option>
-                        <option value="opcion4">opcion4</option>
+                    <select class="form-control" id="provinces">
+                        <!-- Se cargan del backend -->
                     </select>
                 </div>
             <div class="col-md"></div>
@@ -52,12 +44,8 @@
             <div class="col-md"></div>
                 <div class="col-md">
                     <label for="canton">Cantón</label>
-                    <select class="form-control" id="canton">
-                        <option value="nulo">Seleccionar Cantón</option>
-                        <option value="opcion1">opcion1</option>
-                        <option value="opcion2">opcion2</option>
-                        <option value="opcion3">opcion3</option>
-                        <option value="opcion4">opcion4</option>
+                    <select class="form-control" id="cantons">
+                        <option value="" data-price="0">Cantones</option>
                     </select>
                 </div>
             <div class="col-md"></div>
@@ -92,7 +80,7 @@
                 <div class="col-md">
                     <div class="slidecontainer">
                         <input type="range" min="4" max="12" value="4" class="slider" id="myRange" style="width: 100%;">
-                        <p id="valorHoras"></p>
+                        <p id="valorHoras2"></p>
                     </div>
                 </div>
             <div class="col-md"></div>
@@ -103,11 +91,7 @@
                 <div class="col-md">
                     <label for="menu">Menú</label>
                     <select class="form-control" id="menu">
-                        <option value="nulo">Seleccionar Menú</option>
-                        <option value="opcion1">opcion1</option>
-                        <option value="opcion2">opcion2</option>
-                        <option value="opcion3">opcion3</option>
-                        <option value="opcion4">opcion4</option>
+                        <!-- Se carga del backend -->
                     </select>
                 </div>
             <div class="col-md"></div>

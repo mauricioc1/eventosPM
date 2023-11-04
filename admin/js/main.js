@@ -31,10 +31,28 @@
 
 // ///////////////// *******************************  FUNCIONES  ****************************** /////////////////////
 
-function adminLogin(e){
-    e.preventDefault();
-    
-    window.location.href = "home.php";
+async function adminLogin(e){
+  e.preventDefault();
+
+  // nombre de usuario
+  var email = $("input#email").val();
+  // contrasenna
+  var pass = $("input#password").val();
+
+  const formData = new FormData();
+
+  formData.append("email", email);
+  formData.append("pass", pass);
+  formData.append("ajaxMethod", "adminLogin");
+
+  var result = await ajaxRequest(formData);
+  showNotification(result.Message, result.Success);
+  if(result.Success){
+    setTimeout(()=>{
+      window.location.href = 'home.php';
+    }, 1500)
+  }
+
 }
 
 function showNotification(message, success, timer = true){

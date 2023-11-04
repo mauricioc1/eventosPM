@@ -4,6 +4,9 @@
 
 
 <!-- INICIO DE SESION -->
+<?php 
+    if(isset($_SESSION['ADMIN'])) exit(header('Location: home.php'));
+?>
 
 <div class="background_login">
 
@@ -14,8 +17,8 @@
         <form id="login_admin" method="post">
 
             <div class="campo">
-                <label for="username"><i class="fa-regular fa-circle-user"></i></label>
-                <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+                <label for="email"><i class="fa-regular fa-circle-user"></i></label>
+                <input type="email" name="email" id="email" placeholder="Correo Electrónico">
             </div>
 
             <div class="campo">
