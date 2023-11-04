@@ -7,7 +7,7 @@
   document.addEventListener('DOMContentLoaded', function (){
     // Despues de cargar todo el DOM se ejecuta el codigo
     var slider = document.querySelector("#myRange");
-    var output = document.querySelector("#valorHoras");
+    var output = document.querySelector("#valorHoras2");
     $(output).text($(slider).val()); // Display the default slider value
 
     
@@ -31,6 +31,18 @@
     //   var result = await ajaxRequest(myData);
     //   showNotification(result.Message, result.Success);
     // })();
+    if($("form#cotizar")){
+      // cargar las opciones desde la base de datos
+      loadEvents();
+
+      loadProvinces();
+
+      loadMenu();
+
+      // cargar los cantones al seleccionar la provincia
+      $("body").on("change", "select#provinces", loadCantons);
+
+    }
 
 
   }); // end DOMContentLoaded
@@ -90,6 +102,46 @@ function showNotification(message, success, timer = true){
   }, 100)
 }
 
+///////////// ************************ CARGAR EVENTOS ************************ ///////////////
+// Funcion para cargar las opciones de los eventos al formulario
+async function loadEvents(){
+  const data = new FormData();
+
+  data.append('ajaxMethod', 'loadFormSelectEvents');
+  await ajaxHTMLRequest(data, 'select#events');
+}
+
+///////////// ************************  CARGAR PROVINCIAS ************************ ///////////////
+// Funcion para cargar las opciones de los eventos al formulario
+async function loadProvinces(){
+  const data = new FormData();
+
+  data.append('ajaxMethod', 'loadFormSelectProvinces');
+  await ajaxHTMLRequest(data, 'select#provinces');
+}
+
+///////////// ************************  CARGAR CANTONES ************************ ///////////////
+// Funcion para cargar las opciones de los eventos al formulario
+async function loadCantons(){
+  const data = new FormData();
+
+  data.append('ajaxMethod', 'loadFormSelectCantons');
+  data.append('idProvince', $(this).val());
+  console.log(data);
+  await ajaxHTMLRequest(data, 'select#cantons');
+}
+
+///////////// ************************  CARGAR MENU ************************ ///////////////
+// Funcion para cargar las opciones de los eventos al formulario
+async function loadMenu(){
+  const data = new FormData();
+
+  data.append('ajaxMethod', 'loadFormSelectMenu');
+  await ajaxHTMLRequest(data, 'select#menu');
+}
+///////////// ************************ CALCULAR PRECIO ************************ ///////////////
+// Funcion para calcular el precio de un evento segun las opciones seleccionadas en el form
+
 
 ///////////// ************************ AJAX BACKEND CONN ************************ ///////////////
 // FUNCION QUE REALIZA LA CONECCION CON EL BACKEND
@@ -109,3 +161,18 @@ async function ajaxRequest(formData){
   });
 }
 
+// FUNCION QUE REALIZA LA CONECCION CON EL BACKEND Y RETORNA UN HTML
+// Debe haber un campo en el form data indicando el metodo a utilizar en el ajax controller llamado 'ajaxMethod'
+// html container indica el contenedor en el cual va ser insertado el html es un string indicando el id
+async function ajaxHTMLRequest(formData, html_container){
+  $.ajax({
+    url: 'app/Ajax.php',
+    type:'POST',
+    processData: false,
+    contentType: false,
+    dataType:'html',
+    data: formData
+  }).done(function(data){
+    $(html_container).html(data);
+  });
+}
