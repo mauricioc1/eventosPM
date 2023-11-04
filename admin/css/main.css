@@ -109,28 +109,28 @@ h1, h6 {
 }
 
 .btn-user-background {
-    background-image: url('../imgs/user.png');
+    background-image: url('../../imgs/user.png');
     background-size: contain; 
     background-position: center center; 
     background-repeat: no-repeat; 
 }
 
 .btn-event-background {
-    background-image: url('../imgs/event.png');
+    background-image: url('../../imgs/event.png');
     background-size: contain; 
     background-position: center center; 
     background-repeat: no-repeat; 
 }
   
 .btn-bill-background {
-    background-image: url('../imgs/bill.png');
+    background-image: url('../../imgs/bill.png');
     background-size: contain; 
     background-position: center center; 
     background-repeat: no-repeat; 
 }
   
 .btn-menu-background {
-    background-image: url('../imgs/menu.png');
+    background-image: url('../../imgs/menu.png');
     background-size: contain; 
     background-position: center center; 
     background-repeat: no-repeat; 
