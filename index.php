@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col text-center">
                 <h3 style="margin-bottom: 2%; margin-top: 2%;">Formulario De Cotización</h3>
-                <h1 id="precioTotal" style="margin-bottom: 2%;">₡0.00</h1>
+                <h1 id="precioTotal" style="margin-bottom: 2%;">₡ <span>0</span> </h1>
             </div>
         </div>
 
@@ -45,7 +45,7 @@
                 <div class="col-md">
                     <label for="canton">Cantón</label>
                     <select class="form-control" id="cantons">
-                        <option value="">Cantones</option>
+                        <option value="" data-price="0">Cantones</option>
                     </select>
                 </div>
             <div class="col-md"></div>

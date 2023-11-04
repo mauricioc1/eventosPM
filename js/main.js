@@ -31,7 +31,7 @@
     //   var result = await ajaxRequest(myData);
     //   showNotification(result.Message, result.Success);
     // })();
-    if($("form#cotizar")){
+    if($("div#cotizar")){
       // cargar las opciones desde la base de datos
       loadEvents();
 
@@ -41,6 +41,8 @@
 
       // cargar los cantones al seleccionar la provincia
       $("body").on("change", "select#provinces", loadCantons);
+
+      $("body").on("click", "button#calculatePrice", calcEventPrice);
 
     }
 
@@ -141,7 +143,28 @@ async function loadMenu(){
 }
 ///////////// ************************ CALCULAR PRECIO ************************ ///////////////
 // Funcion para calcular el precio de un evento segun las opciones seleccionadas en el form
+function calcEventPrice(){
+  var totalPrice = 0;
 
+  // event type
+  totalPrice += parseInt($("select#events option:selected" ).attr("data-price"));
+
+  // canton price
+  totalPrice += parseInt($("select#cantons option:selected" ).attr("data-price"));
+
+  // duration
+  totalPrice += parseInt($("p#valorHoras2" ).text()) * 1200;
+
+  // menu 
+  totalPrice += parseInt($("input#invitados").val()) * parseInt($("select#menu option:selected" ).attr("data-price"))
+
+  // pirotecnia
+  if($( "input#pirotecnia" ).prop( "checked" ) ){
+    totalPrice += 5000;
+  }
+  // precio
+  $("h1#precioTotal span").text(totalPrice);
+}
 
 ///////////// ************************ AJAX BACKEND CONN ************************ ///////////////
 // FUNCION QUE REALIZA LA CONECCION CON EL BACKEND

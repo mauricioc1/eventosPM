@@ -51,7 +51,7 @@
             $this->db->query($sql);
             $events = $this->db->results();
             foreach($events  as $event){ ?>
-                <option value="<?php echo $event->idEvento ?>"> <?php echo $event->nombreEvento; ?> </option>
+                <option value="<?php echo $event->idEvento ?>" data-price="<?php echo $event->precioEvento; ?>"> <?php echo $event->nombreEvento; ?> </option>
             <?php }
         }
 
@@ -74,13 +74,13 @@
             $this->db->query($sql);
 
             $this->db->bind(":idProvince", $data['idProvince']);
-            
+
             $cantons = $this->db->results();
             ?> 
-                <option value="">Cantones</option>
+                <option value="" data-price="0">Cantones</option>
             <?php
             foreach($cantons  as $canton){ ?>
-                <option value="<?php echo $canton->idCanton ?>"> <?php echo $canton->nombreCanton; ?> </option>
+                <option value="<?php echo $canton->idCanton ?>" data-price="<?php echo $canton->precioCanton; ?>"> <?php echo $canton->nombreCanton; ?> </option>
             <?php }
         }
 
@@ -90,7 +90,7 @@
             $this->db->query($sql);
             $menu = $this->db->results();
             foreach($menu  as $food){ ?>
-                <option value="<?php echo $food->idComida ?>"> <?php echo $food->nombreComida; ?> </option>
+                <option value="<?php echo $food->idComida ?>" data-price="<?php echo $food->precioComida; ?>"> <?php echo $food->nombreComida; ?> </option>
             <?php }
         }
         
