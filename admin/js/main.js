@@ -104,5 +104,5 @@ async function ajaxRequest(formData){
 
  ///////////// ************************ TABLAS ************************ ///////////////
 $(document).ready(function () {
-    $('#example').DataTable();
+    // $('#example').DataTable();
 });
