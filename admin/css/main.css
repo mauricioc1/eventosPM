@@ -161,3 +161,28 @@ div.panel-navigation-container a.navigation-option i{
     margin: 2rem 0;
 }
 
+
+/* ////////////////////////////////////// EDITAR Y AGREGAR ///////////////////////////////////////////////////////*/
+
+
+
+.edit-panel {
+    width: 40%;
+    height: 60%; 
+    background-color: white;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+
+.editButton{
+    display: flex;
+    justify-content: center;
+}
+
+.editButton input{
+    color: #fff;
+    background-color: #54a2ff;
+    cursor: pointer;
+}
