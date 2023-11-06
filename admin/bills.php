@@ -1,7 +1,7 @@
 <?php 
     require 'inc/tableHeader.php'; 
 ?>
-<div class="container" style="background-color:white;">
+<div class="container data_table_container" style="background-color:white;">
         <table id="bills-table" class="table table-striped" style="width:100%">
         <thead>
                 <tr>
