@@ -1,7 +1,6 @@
 <?php 
 require 'inc/tableHeader.php'; 
 ?>
-ㅤ <!--caracter para un padding-->
 <div class="container" style="background-color:white;">
         <table id="example" class="table table-striped" style="width:100%">
             <thead>

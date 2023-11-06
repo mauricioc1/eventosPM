@@ -22,6 +22,7 @@
     
     <style> body {
         background-color: rgb(16,40,255);
+        margin-top: 2%;
     }
     </style>
 </head>
