@@ -62,7 +62,7 @@
         <div class="row" style="margin-bottom: 2%;">
             <div class="col-md"></div>
                 <div class="col-md">
-                    <input type="text" id="invitados" name="invitados" style="width: 100%; height: 110%">
+                    <input type="text" id="invitados" name="invitados" style="width: 100%; height: 110%" data-mask="0000">
                 </div>
             <div class="col-md"></div>
         </div>

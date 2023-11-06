@@ -1,5 +1,9 @@
 
 // VARIABLES GLOBALES
+const HOUR_EVENT_PRICE = 1200;
+const COLD_PYROTECHNICS_PRICE = 5000;
+
+var totalBillPrice = 0;
 
 (function () {
   "use strict";
@@ -42,8 +46,11 @@
       // cargar los cantones al seleccionar la provincia
       $("body").on("change", "select#provinces", loadCantons);
 
+      // se calcula el precio del evento
       $("body").on("click", "button#calculatePrice", calcEventPrice);
 
+      // se genera la factura del evento
+      $("body").on("click", "button#processBill", generateBill);
     }
 
 
@@ -152,17 +159,50 @@ function calcEventPrice(){
   totalPrice += parseInt($("select#cantons option:selected" ).attr("data-price"));
 
   // duration
-  totalPrice += parseInt($("p#valorHoras2" ).text()) * 1200;
+  totalPrice += parseInt($("p#valorHoras2" ).text()) * HOUR_EVENT_PRICE;
 
   // menu 
   totalPrice += parseInt($("input#invitados").val()) * parseInt($("select#menu option:selected" ).attr("data-price"))
 
   // pirotecnia
   if($( "input#pirotecnia" ).prop( "checked" ) ){
-    totalPrice += 5000;
+    totalPrice += COLD_PYROTECHNICS_PRICE;
   }
   // precio
+  totalBillPrice = totalPrice; // se guarda en la var global
   $("h1#precioTotal span").text(totalPrice);
+}
+
+///////////// ************************ GENERAR FACTURA ************************ ///////////////
+// Con las opciones del formulario genera la factura y la guarda en la db luego descarga el archivo
+async function generateBill(){
+  // obtener los datos del formulario
+  const billData = new FormData();
+
+  // obtener los datos del formulario
+  // evento
+  billData.append(':idEvent', $("select#events option:selected" ).val());
+  // canton
+  billData.append(':idCanton', $("select#cantons option:selected").val());
+  // asistentes
+  billData.append(':guests', $("input#invitados").val());
+  // horas
+  billData.append(':hours', parseInt($("p#valorHoras2" ).text()));
+  // menu
+  billData.append(':idFood', $("select#menu option:selected").val());
+  // pirotecnia fria
+  billData.append(':pirotechnics', $( "input#pirotecnia" ).prop( "checked" ) ? 1 : 0);
+
+  billData.append('ajaxMethod', 'saveBill');
+
+  var result = await ajaxRequest(billData);
+
+  window.open(
+    'http://localhost/eventosPM/app/Factura_Nro_1.pdf',
+    '_blank' // <- This is what makes it open in a new window.
+  );
+
+  showNotification(result.Message, result.Success);
 }
 
 ///////////// ************************ AJAX BACKEND CONN ************************ ///////////////

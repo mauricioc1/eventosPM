@@ -116,7 +116,61 @@
             
         }
         
+        // metodo para guardar la factura en la base de datos y generar la factura
+        private function saveBill($bill){
+            $sql = "INSERT INTO facturas (idEvento, cantAsistentes, duracion, idCanton, idComida, pirotecnia) ";
+            $sql .= "VALUES (:idEvent, :guests, :hours, :idCanton, :idFood, :pirotechnics);";
 
+            $this->db->query($sql);
+            // bind de los valores
+            foreach($bill as $bind => $value){
+                $this->db->bind($bind, $value);
+            }
+
+            if(!$this->db->execute()){
+                return $this->ajaxRequestResult(false, "Error al guardar la factura");
+            }else{
+
+                // generar archivo de factura y descargarlo en la pc
+                $bill[':idBill'] =  $this->db->inserted_id();
+                $sql = "SELECT idFactura, nombreEvento, precioEvento, cantAsistentes, duracion, nombreCanton, precioCanton, nombreProvincia, nombreComida, precioComida, pirotecnia from facturas";
+                $sql .= " INNER JOIN eventos ON eventos.idEvento = facturas.idEvento";
+                $sql .= " INNER JOIN cantones ON cantones.idCanton = facturas.idCanton";
+                $sql .= " INNER JOIN provincias ON provincias.idProvincia = cantones.idProvincia";
+                $sql .= " INNER JOIN menu ON menu.idComida = facturas.idComida";
+                $sql .= " WHERE idFactura = :idBill";
+
+                $this->db->query($sql);
+                $this->db->bind(':idBill', $bill[':idBill']);
+                $newBill = $this->db->result();
+
+                $newBill['priceHour'] = 1200;
+                $newBill['pricePyrotechnics'] = 5000;
+                
+                $this->generateBill($newBill);
+
+                return $this->ajaxRequestResult(true, "Se ha guardar la factura");
+            }
+
+        }
+
+        // metodo para la generacion de la factura
+        private function generateBill($bill){
+            require 'invoice.php';
+        }
+
+        // metodo que dada una factura le calcula el total
+        private function totalBill($bill){
+            $totalBillPrice = 0;
+            
+            $totalBillPrice += $bill['precioEvento'];
+            $totalBillPrice += $bill['precioCanton'];
+            $totalBillPrice += $bill['duracion'] * $bill["priceHour"];
+            $totalBillPrice += $bill['cantAsistentes'] * $bill["precioComida"];
+            $totalBillPrice += $bill['pirotecnia'] ? $bill['pricePyrotechnics'] : 0;
+
+            return $totalBillPrice;
+        }
 
     }
 
