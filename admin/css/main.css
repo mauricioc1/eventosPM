@@ -96,6 +96,8 @@ div.panel-container{
     background-color: white;
     display: flex;
     flex-direction: column;
+    border-radius: var(--radius);
+    padding: 1rem;
 }
 
 .admin-panel h1 {
@@ -108,6 +110,7 @@ div.panel-container{
 
 div.panel-navigation-container{
     background-color: #dcdcdc;
+    border-radius: var(--radius);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,6 +163,12 @@ div.panel-navigation-container a.navigation-option i{
     font-size: 8rem;
     margin: 2rem 0;
 }
+
+/* ////////////////////////////////////// DATATABLES ///////////////////////////////////////////////////////*/
+div.data_table_container{
+    padding: 1rem;
+}
+
 
 
 /* ////////////////////////////////////// EDITAR Y AGREGAR ///////////////////////////////////////////////////////*/
