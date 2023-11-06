@@ -13,5 +13,3 @@ require 'inc/tableHeader.php';
         </table>
     </div>
 
-
-<?php?>

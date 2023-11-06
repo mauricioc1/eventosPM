@@ -173,6 +173,15 @@
             
         }
 
+        // METODO PARA CERRAR SESION DEL ADMINSITRADOR
+        private function adminLogout($data){
+            session_unset(); 
+            session_destroy();
+            return $this->ajaxRequestResult(true, "Se ha cerrado sesión");
+            
+        }
+
+
         // ---------------------------------------- FACTURAS
         // cargar la tabla de facturas
         private function loadBillsDataTable($REQUEST){
