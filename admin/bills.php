@@ -5,64 +5,48 @@ require 'inc/tableHeader.php';
         <table id="example" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>ID Factura</th>
+                    <th>Nombre</th>
+                    <th>Cantón</th>
+                    <th>Asistentes</th>
+                    <th>Duración</th>
+                    <th>Menú</th>
+                    <th>Monto total</th>
+                    <th>Borrar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011-04-25</td>
-                    <td>$320,800</td>
+                    <td>0001</td>
+                    <td>John</td>
+                    <td>San Pedro</td>
+                    <td>6</td>
+                    <td>60</td>
+                    <td>Arroz con pollo</td>
+                    <td>120000</td>
+                    <td><button class="btn btn-dark" type="button">Borrar</button></td>
                 </tr>
                 <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>63</td>
-                    <td>2011-07-25</td>
-                    <td>$170,750</td>
-                </tr>
-                <tr>
-                    <td>Ashton Cox</td>
-                    <td>Junior Technical Author</td>
-                    <td>San Francisco</td>
-                    <td>66</td>
-                    <td>2009-01-12</td>
-                    <td>$86,000</td>
-                </tr>
-                <tr>
-                    <td>Cedric Kelly</td>
-                    <td>Senior Javascript Developer</td>
-                    <td>Edinburgh</td>
-                    <td>22</td>
-                    <td>2012-03-29</td>
-                    <td>$433,060</td>
-                </tr>
-                <tr>
-                    <td>Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>33</td>
-                    <td>2008-11-28</td>
-                    <td>$162,700</td>
+                    <td>0002</td>
+                    <td>Sergio</td>
+                    <td>Santo Domingo</td>
+                    <td>2</td>
+                    <td>50</td>
+                    <td>Carne</td>
+                    <td>240000</td>
+                    <td><button class="btn btn-dark" type="button">Borrar</button></td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                <th>ID Factura</th>
+                    <th>Nombre</th>
+                    <th>Cantón</th>
+                    <th>Asistentes</th>
+                    <th>Duración</th>
+                    <th>Menú</th>
+                    <th>Monto total</th>
+                    <th>Borrar</th>
                 </tr>
             </tfoot>
         </table>

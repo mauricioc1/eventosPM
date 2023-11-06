@@ -23,7 +23,7 @@
         //   showNotification(result.Message, result.Success);
         // })();
   
-  
+        $('#example').DataTable();
     }); // end DOMContentLoaded
   
 })();
@@ -103,6 +103,6 @@ async function ajaxRequest(formData){
 
 
  ///////////// ************************ TABLAS ************************ ///////////////
-$(document).ready(function () {
-    // $('#example').DataTable();
-});
+//$(document).ready(function () {
+  //  $('#example').DataTable();
+//});

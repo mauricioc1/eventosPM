@@ -3,7 +3,7 @@
 <?php 
     require 'inc/header.php'; 
 
-    if(!isset($_SESSION['ADMIN'])) exit(header('Location: index.php'));
+  //  if(!isset($_SESSION['ADMIN'])) exit(header('Location: index.php'));
 
 ?>
     <div class="panel-container">

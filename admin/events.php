@@ -5,67 +5,38 @@ require 'inc/tableHeader.php';
         <table id="example" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Nombre evento</th>
+                    <th>Precio</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011-04-25</td>
-                    <td>$320,800</td>
+                    <td>Boda</td>
+                    <td>45000</td>
+                    <td><button class="btn btn-dark" type="button">Editar</button></td>
+                    <td><button class="btn btn-dark" type="button">Borrar</button></td>
                 </tr>
                 <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>63</td>
-                    <td>2011-07-25</td>
-                    <td>$170,750</td>
-                </tr>
-                <tr>
-                    <td>Ashton Cox</td>
-                    <td>Junior Technical Author</td>
-                    <td>San Francisco</td>
-                    <td>66</td>
-                    <td>2009-01-12</td>
-                    <td>$86,000</td>
-                </tr>
-                <tr>
-                    <td>Cedric Kelly</td>
-                    <td>Senior Javascript Developer</td>
-                    <td>Edinburgh</td>
-                    <td>22</td>
-                    <td>2012-03-29</td>
-                    <td>$433,060</td>
-                </tr>
-                <tr>
-                    <td>Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>33</td>
-                    <td>2008-11-28</td>
-                    <td>$162,700</td>
+                    <td>Evento Empresarial</td>
+                    <td>60000</td>
+                    <td><button class="btn btn-dark" type="button">Editar</button></td>
+                    <td><button class="btn btn-dark" type="button">Borrar</button></td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Nombre evento</th>
+                    <th>Precio</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
                 </tr>
             </tfoot>
         </table>
+
+        <button class="btn btn-dark" type="button" style="margin-bottom: 1%; margin-top: 1%">Agregar Evento</button>
+
     </div>
 
 
