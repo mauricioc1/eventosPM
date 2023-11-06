@@ -14,6 +14,8 @@
 
         $("body").on("click", "[data-download-bill]", downloadBill);
         
+        $("body").on("click", "[data-logout]", adminLogout);
+        
         
         // showNotification("Factura generada", true);
 
@@ -67,6 +69,22 @@ async function adminLogin(e){
     }, 1500)
   }
 
+}
+
+async function adminLogout(e){
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("ajaxMethod", "adminLogout");
+
+  var result = await ajaxRequest(formData);
+  showNotification(result.Message, result.Success);
+
+  if(result.Success){
+    setTimeout(()=>{
+      window.location.href = 'index.php';
+    }, 1500)
+  }
 }
 
 function showNotification(message, success, timer = true){
