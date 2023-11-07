@@ -1,35 +1,15 @@
 <?php 
 require 'inc/tableHeader.php'; 
 ?>
-<div class="container" style="background-color:white;">
-        <table id="example" class="table table-striped" style="width:100%">
+    <div class="container data_table_container" style="background-color:white;">
+        <table id="users-table" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Correo electrónico</th>
-                    <th>Contraseña</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>john@gmail.com</td>
-                    <td>*******</td>
+                  <th width="40%">Nombre</th>
+                  <th width="40%">Correo Electrónico</th>
+                  <th width="20%">Acciones</th>
                 </tr>
-                <tr>
-                    <td>Sergio</td>
-                    <td>sergio@gmail.com</td>
-                    <td>********</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Correo electrónico</th>
-                    <th>Contraseña</th>
-                </tr>
-            </tfoot>
+                </thead>    
         </table>
     </div>
 
-
-<?php?>

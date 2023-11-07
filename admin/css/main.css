@@ -96,18 +96,38 @@ div.panel-container{
     background-color: white;
     display: flex;
     flex-direction: column;
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+div.admin_panel_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .admin-panel h1 {
     font-size: 3.8rem;
 }
-.admin-panel h6 {
-    font-size: 2.5rem;
+.admin-panel button.btn_logout{
+    margin: .5rem 0;
+    background-color: var(--black);
+    border-radius: .3rem;
+    border: 1px solid transparent;
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.admin-panel button.btn_logout:hover{
+    background-color: var(--white);
+    border-color: var(--black);
+    color: var(--black);
 }
 
 
 div.panel-navigation-container{
     background-color: #dcdcdc;
+    border-radius: var(--radius);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,6 +180,12 @@ div.panel-navigation-container a.navigation-option i{
     font-size: 8rem;
     margin: 2rem 0;
 }
+
+/* ////////////////////////////////////// DATATABLES ///////////////////////////////////////////////////////*/
+div.data_table_container{
+    padding: 1rem;
+}
+
 
 
 /* ////////////////////////////////////// EDITAR Y AGREGAR ///////////////////////////////////////////////////////*/

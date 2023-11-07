@@ -8,9 +8,9 @@
 ?>
     <div class="panel-container">
         <div class="admin-panel">
-            <div class="">
+            <div class="admin_panel_header">
                 <h1>Panel de administrador</h1>
-                <h6>Bienvenido, administrador</h6>
+                <button class="btn_logout" data-logout="true">Cerrar Sesión</button>
             </div>
 
             <div class="panel-navigation-container">
