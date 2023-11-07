@@ -3,7 +3,12 @@
 
     <div class="mision container">
         <h2>Mision</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima minus omnis esse voluptatibus sapiente accusantium amet iste labore sequi numquam, excepturi delectus beatae voluptate ducimus nemo, atque, consequuntur sunt.</p>
+        <p>
+            La misión de nuestra empresa es crear experiencias memorables y únicas, mediante el diseño, 
+            planeación y ejecución de eventos de alta calidad. Garantizamos un servicio excepcional y 
+            a la medida de las necesidades del cliente. La principal meta es ofrecer soluciones creativas 
+            que dejen una impresión duradera en cada uno de los participantes.
+        </p>
     </div>
 
     <div class="formulario" id="cotizar">
