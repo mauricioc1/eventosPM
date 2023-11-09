@@ -13,119 +13,119 @@
 
     <div class="formulario" id="cotizar">
 
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h3 style="margin-bottom: 2%; margin-top: 2%;">Formulario De Cotización</h3>
-                <h1 id="precioTotal" style="margin-bottom: 2%;">₡ <span>0</span> </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h3 style="margin-bottom: 2%; margin-top: 2%;">Formulario De Cotización</h3>
+                    <h1 id="precioTotal" style="margin-bottom: 2%;">₡ <span>0</span> </h1>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <label for="events">Tipo de Evento</label>
-                    <select class="form-control" id="events">
-                        <!-- Se cargan del backend -->
-                    </select>
-                </div>
-            <div class="col-md"></div>
-        </div>
-
-        <p class="text-center" style="margin-top: 2%; font-size: small">Ubicación</p>
-
-        <div class="row" style="margin-bottom: 2%;">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <label for="pr">Provincia</label>
-                    <select class="form-control" id="provinces">
-                        <!-- Se cargan del backend -->
-                    </select>
-                </div>
-            <div class="col-md"></div>
-        </div>
-
-        <div class="row" style="margin-bottom: 2%;">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <label for="canton">Cantón</label>
-                    <select class="form-control" id="cantons">
-                        <option value="" data-price="0">Cantones</option>
-                    </select>
-                </div>
-            <div class="col-md"></div>
-        </div>
-
-        <div class="row" >
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <label for="invitados">Asistentes al evento</label>
-                </div>
-            <div class="col-md"></div>
-        </div>
-
-        <div class="row" style="margin-bottom: 2%;">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <input type="text" id="invitados" name="invitados" style="width: 100%; height: 110%" data-mask="0000">
-                </div>
-            <div class="col-md"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <label for="slider">Duración del evento en horas</label>
-                </div>
-            <div class="col-md"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <div class="slidecontainer">
-                        <input type="range" min="4" max="12" value="4" class="slider" id="myRange" style="width: 100%;">
-                        <p id="valorHoras2"></p>
+            <div class="row">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <label for="events">Tipo de Evento</label>
+                        <select class="form-control" id="events">
+                            <!-- Se cargan del backend -->
+                        </select>
                     </div>
-                </div>
-            <div class="col-md"></div>
-        </div>
+                <div class="col-md"></div>
+            </div>
 
-        <div class="row" style="margin-top: 1%;">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <label for="menu">Menú</label>
-                    <select class="form-control" id="menu">
-                        <!-- Se carga del backend -->
-                    </select>
-                </div>
-            <div class="col-md"></div>
-        </div>
+            <p class="text-center" style="margin-top: 2%; font-size: small">Ubicación</p>
 
-    
-
-
-        <div class="row" style="margin-top: 2%;">
-            <div class="col-md"></div>
-                <div class="col-md">
-                    <div class="form-check">
-                        <input type="checkbox"  class="form-check-input" id="pirotecnia" name="pirotecnia"/>  
-                        <label class="form-check-label" for="pirotecnia">Pirotecnia Fría</label>
+            <div class="row" style="margin-bottom: 2%;">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <label for="pr">Provincia</label>
+                        <select class="form-control" id="provinces">
+                            <!-- Se cargan del backend -->
+                        </select>
                     </div>
-                </div>
-            <div class="col-md"></div>
-        </div>
+                <div class="col-md"></div>
+            </div>
 
-        <div class="row" style="margin-bottom: 2%; margin-top: 2%;">
-            <div class="col-md-4"></div>
-            <div class="col-md">
-                <button class="btn btn-success btn-lg" id="calculatePrice">Calcular Precio</button>
+            <div class="row" style="margin-bottom: 2%;">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <label for="canton">Cantón</label>
+                        <select class="form-control" id="cantons">
+                            <option value="" data-price="0">Cantones</option>
+                        </select>
+                    </div>
+                <div class="col-md"></div>
             </div>
-            <div class="col-md">
-                <button class="btn btn-primary btn-lg" id="processBill">Generar Factura</button>
+
+            <div class="row" >
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <label for="invitados">Asistentes al evento</label>
+                    </div>
+                <div class="col-md"></div>
             </div>
-            <div class="col-md"></div>
-        </div>
+
+            <div class="row" style="margin-bottom: 2%;">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <input type="text" id="invitados" name="invitados" style="width: 100%; height: 110%" data-mask="0000">
+                    </div>
+                <div class="col-md"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <label for="slider">Duración del evento en horas</label>
+                    </div>
+                <div class="col-md"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <div class="slidecontainer">
+                            <input type="range" min="4" max="12" value="4" class="slider" id="myRange" style="width: 100%;">
+                            <p id="valorHoras2"></p>
+                        </div>
+                    </div>
+                <div class="col-md"></div>
+            </div>
+
+            <div class="row" style="margin-top: 1%;">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <label for="menu">Menú</label>
+                        <select class="form-control" id="menu">
+                            <!-- Se carga del backend -->
+                        </select>
+                    </div>
+                <div class="col-md"></div>
+            </div>
+
+        
+
+
+            <div class="row" style="margin-top: 2%;">
+                <div class="col-md"></div>
+                    <div class="col-md">
+                        <div class="form-check">
+                            <input type="checkbox"  class="form-check-input" id="pirotecnia" name="pirotecnia"/>  
+                            <label class="form-check-label" for="pirotecnia">Pirotecnia Fría</label>
+                        </div>
+                    </div>
+                <div class="col-md"></div>
+            </div>
+
+            <div class="row" style="margin-bottom: 2%; margin-top: 2%;">
+                <div class="col-md-4"></div>
+                <div class="col-md">
+                    <button class="btn btn-success btn-lg" id="calculatePrice">Calcular Precio</button>
+                </div>
+                <div class="col-md">
+                    <button class="btn btn-primary btn-lg" id="processBill">Generar Factura</button>
+                </div>
+                <div class="col-md"></div>
+            </div>
     </div>
 
 
