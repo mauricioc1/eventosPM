@@ -27,7 +27,7 @@
             <header class="site_header">
                 
                 <div class="logo">
-                    <img src="imgs/logo.png"></img>
+                    <img src="imgs/logo.png" alt="logo EventosPM"></img>
                 </div>
                 <nav class="navigation_menu">
                     <ul id="navigation">
@@ -42,7 +42,7 @@
             <div class="header_content">
                 <h1>Tu evento personalizado con Evento PM</h1>
                 <div class="header_img">
-                    <img src="imgs/header.png"></img>
+                    <img src="imgs/header.png" alt="imagen Fondo"></img>
                 </div>
 
             </div>
