@@ -26,3 +26,10 @@
     }
     </style>
 </head>
+<body>
+
+    <div id="notification_container">
+        <!-- <div class="notification n_sucess visible">
+            <p>Mensaje de la notificacion  <a href="" id="close_notification"><i class="fas fa-times noevents"></i></a></p>
+        </div> -->
+    </div>

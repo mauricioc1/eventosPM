@@ -47,6 +47,21 @@
 }
 
 /* ////////////////////////// ----------------------------- FORMULARIO ---------------------- //////////////////////////////*/
+div#cotizar,
+div#cotizar input,
+div#cotizar select{
+    font-size: 1.5rem!important;
+   
+}
+
+div#cotizar label{
+    font-weight: bold;
+}
+
+div#cotizar button{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 .empresa {
     background-color: #89CFF0;

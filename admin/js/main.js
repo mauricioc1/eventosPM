@@ -11,6 +11,11 @@
         
         // AL ENVIAR EL FROMULARIO DE INICIO DE SESION
         $("body").on("submit", "form#login_admin", adminLogin);
+
+        $("body").on("click", "[data-download-bill]", downloadBill);
+        
+        $("body").on("click", "[data-logout]", adminLogout);
+        
         
         // showNotification("Factura generada", true);
 
@@ -22,8 +27,19 @@
         //   var result = await ajaxRequest(myData);
         //   showNotification(result.Message, result.Success);
         // })();
+
+        // pagina de facturas
+        if($("#bills-table")) initDataTable('bills', 'loadBillsDataTable');
+        // tabla de usuarios
+        if($("#users-table")) initDataTable('users', 'loadUsersDataTable');
+        // tabla de eventos
+        if($("#events-table")) initDataTable('events', 'loadEventsDataTable');
+         // tabla de menu
+         if($("#menu-table")) initDataTable('menu', 'loadMenuDataTable');
+
+        
+        
   
-        $('#example').DataTable();
     }); // end DOMContentLoaded
   
 })();
@@ -55,6 +71,22 @@ async function adminLogin(e){
 
 }
 
+async function adminLogout(e){
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("ajaxMethod", "adminLogout");
+
+  var result = await ajaxRequest(formData);
+  showNotification(result.Message, result.Success);
+
+  if(result.Success){
+    setTimeout(()=>{
+      window.location.href = 'index.php';
+    }, 1500)
+  }
+}
+
 function showNotification(message, success, timer = true){
     const notification = $('<div></div>');
     notification.addClass('notification');
@@ -80,9 +112,25 @@ function showNotification(message, success, timer = true){
           }    
         }, 3000)   
     }, 100)
-  }
+}
 
-  ///////////// ************************ AJAX BACKEND CONN ************************ ///////////////
+async function downloadBill(button){
+  const myData = new FormData();
+  myData.append('ajaxMethod', 'generateAdminBill');
+  myData.append('idBill', $(button.currentTarget).attr("data-download-bill"));
+
+  var result = await ajaxRequest(myData);
+
+  window.open(
+    'http://localhost/eventosPM/app/Factura_Nro_1.pdf',
+    '_blank' // <- This is what makes it open in a new window.
+  );
+
+  showNotification(result.Message, result.Success);
+}
+
+
+///////////// ************************ AJAX BACKEND CONN ************************ ///////////////
 // FUNCION QUE REALIZA LA CONECCION CON EL BACKEND
 // Debe haber un campo en el form data indicando el metodo a utilizar en el ajax controller llamado 'ajaxMethod'
 async function ajaxRequest(formData){
@@ -98,11 +146,47 @@ async function ajaxRequest(formData){
         resolve(JSON.parse(data));
       });
     });
-  }
+}
 
 
 
  ///////////// ************************ TABLAS ************************ ///////////////
-//$(document).ready(function () {
-  //  $('#example').DataTable();
-//});
+
+ // FUNCION PARA INICIALIZAR LAS TABLAS
+ function initDataTable(table, ajaxMethod){
+  const columns = getDataTableColumns(table);
+  $("#"+table+"-table").DataTable({
+    "responsive": true,
+    "autoWidth": false,
+    "processing": true,
+    "serverSide": true,
+    "ajax":{
+      url: '../app/Ajax.php',
+      type:"POST",
+      data: {ajaxMethod: ajaxMethod, table:table}
+    },
+    "columns": columns
+  });
+}
+
+// FUNCION PARA ESTABLECER LAS COLUMNAS
+function getDataTableColumns(table){
+  var columns = new Array();
+
+  //PARA FACTURAS
+  if(table === 'bills') columns = [{data: 'idFactura'}, {data: 'nombreEvento'}, {data: 'asistentes'}, {data: 'duracion'}, {data: 'canton'}, {data: 'menu'}, {data: 'pirotecnia'}];
+
+  // PARA USUARIOS
+  if(table === 'users') columns = [{data: 'username'}, {data: 'email'}];
+
+  // PARA EVENTOS
+  if(table === 'events') columns = [{data: 'idEvent'}, {data: 'nameEvent'}, {data: 'priceEvent'}];
+
+  // PARA MENU
+  if(table === 'menu') columns = [{data: 'idFood'}, {data: 'nameFood'}, {data: 'priceFood'}];
+
+  //PARA LAS ACCIONES
+  columns.push({data: 'actions', "orderable": false });
+
+  return columns;
+}

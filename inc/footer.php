@@ -1,7 +1,7 @@
     <footer id="footer">
         <div class="container">
             <div class="footer_image">
-                <img src="imgs/logo.png">
+                <img src="imgs/logo.png" alt="logo EventosPM">
             </div>
             <div class="social_media">
                 <div class="">

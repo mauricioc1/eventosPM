@@ -11,7 +11,7 @@
 <div class="background_login">
 
     <div class="login_container">
-        <div class="login_logo"><img src="../imgs/logo.png"></img></div>
+        <div class="login_logo"><img src="../imgs/logo.png" alt="logo EventosPM"></img></div>
         <h1>Ingresar al panel de administrador</h1>
         
         <form id="login_admin" method="post">
