@@ -27,13 +27,13 @@
             <header class="site_header">
                 
                 <div class="logo">
-                    <img src="imgs/logo.png" alt="logo EventosPM"></img>
+                    <img src="imgs/logo.png" alt="logo EventosPM" tabindex="1"></img>
                 </div>
                 <nav class="navigation_menu">
                     <ul id="navigation">
-                        <li class="inicio" >Inicio</li>
-                        <li class="cotizar" >Cotizar</li>
-                        <li class="contacto" >Contacto</li>
+                        <li class="inicio" tabindex="2">Inicio</li>
+                        <li class="cotizar" tabindex="3">Cotizar</li>
+                        <li class="contacto" tabindex="4">Contacto</li>
                     </ul>
                 </nav>
 
