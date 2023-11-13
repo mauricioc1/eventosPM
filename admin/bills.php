@@ -8,7 +8,7 @@
                   <th width="5%">Factura</th>
                   <th width="20%">Evento</th>
                   <th width="5%">Invitados</th>
-                  <th width="5%">Duracion</th>
+                  <th width="5%">Duración</th>
                   <th width="25%">Canton</th>
                   <th width="20%">Menu</th>
                   <th width="5%">Pirotecnia</th>
